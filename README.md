@@ -49,6 +49,9 @@ $ npm run notifications
 
 # development - run uploader service
 $ npm run uploader
+
+# Using Docker - composer to run all services at one time.
+$ docker-compose up
 ```
 
 ## Test
