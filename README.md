@@ -35,14 +35,20 @@ $ npm install
 ## Running the app
 
 ```bash
-# development
-$ npm run start
+# development - run api service
+$ npm run api
 
-# watch mode
-$ npm run start:dev
+# development - run auth service
+$ npm run auth
 
-# production mode
-$ npm run start:prod
+# development - run actions service
+$ npm run actions
+
+# development - run notifications service
+$ npm run notifications
+
+# development - run uploader service
+$ npm run uploader
 ```
 
 ## Test
@@ -60,14 +66,13 @@ $ npm run test:cov
 
 ## Support
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
+The app is built using NestJs Microservices structure and has:
+- Main api Microservice 
+- Auth Microservice 
+- Notifications Microservice 
+- Actions Microservice 
+- Uploader Microservice
+Also it is build using Event driven architicture and RabbitMQ.
 ## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+- Author - [Ahmed Azzo]
