@@ -1,0 +1,14 @@
+import { Injectable, Logger } from '@nestjs/common';
+import { AbstractRepository, Order } from '@app/common';
+import { InjectConnection, InjectModel } from '@nestjs/mongoose';
+import { Connection, Model } from 'mongoose';
+
+@Injectable()
+export class OrderRepository extends AbstractRepository<Order> {
+  protected readonly logger = new Logger(OrderRepository.name);
+  constructor(
+    @InjectModel(Order.name) OrderModel: Model<Order>,
+    @InjectConnection() connection: Connection) {
+    super(OrderModel, connection);
+  }
+}

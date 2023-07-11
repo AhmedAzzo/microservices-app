@@ -1,0 +1,67 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: ./apps/api/Dockerfile
+      target: development
+    command: npm run start:dev api
+    env_file:
+      - ./apps/api/.env
+    ports:
+      - '3000:3000'
+    volumes:
+      - .:/usr/src/app
+  auth:
+    build:
+      context: .
+      dockerfile: ./apps/auth/Dockerfile
+      target: development
+    command: npm run start:dev auth
+    env_file:
+      - ./apps/auth/.env
+    ports:
+      - '3001:3001'
+    volumes:
+      - .:/usr/src/app
+  uploader:
+    build:
+      context: .
+      dockerfile: ./apps/uploader/Dockerfile
+      target: development
+    command: npm run start:dev uploader
+    env_file:
+      - ./apps/uploader/.env
+    ports:
+      - '3003:3003'
+    volumes:
+      - .:/usr/src/app
+  notifications:
+    build:
+      context: .
+      dockerfile: ./apps/notifications/Dockerfile
+      target: development
+    command: npm run start:dev notifications
+    env_file:
+      - ./apps/notifications/.env
+    depends_on:
+      - rabbitmq
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+  actions:
+    build:
+      context: .
+      dockerfile: ./apps/actions/Dockerfile
+      target: development
+    command: npm run start:dev actions
+    env_file:
+      - ./apps/actions/.env
+    depends_on:
+      - rabbitmq
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+  rabbitmq:
+    image: rabbitmq
+    ports:
+      - '5672:5672'

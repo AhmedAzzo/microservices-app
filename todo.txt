@@ -1,0 +1,152 @@
+realease schema + validation 
+un release schema + validation
+
+coc -- draft  partial-approved approved rejected
+add roles for every api
+add auth guard for every api
+upload service
+check the flow for coc (order) depend on Miro
+coc if not approved no one can see it just who create it
+
+
+
+actions rabbit MQ
+
+
+{
+    "email": "test@mailinator.com",
+    "password": "Aahmed@123"
+}
+
+
+
+
+{
+  "email": "mingo@gmail.com",
+  "firstName": "first name",
+  "lastName": "last name",
+  "position": "section manager",
+  "image": "https://img.freepik.com/free-icon/user_318-159711.jpg",
+  "phoneNumber": "+201111111111",
+  "password": "mingo",
+  "isPrimary": true,
+  "roles": [
+    "6494ce10339ca2bfa2b38588",
+    "6494ce10339ca2bfa2b3858b",
+    "6494ce10339ca2bfa2b3858c",
+    "6494ce10339ca2bfa2b3858d",
+    "6494ce10339ca2bfa2b3858e",
+    "6494ce10339ca2bfa2b38589",
+    "6494ce10339ca2bfa2b3858a",
+    "6494ce10339ca2bfa2b38591",
+    "6494ce10339ca2bfa2b3858f",
+    "6494ce10339ca2bfa2b38590"
+  ],
+  "workspaces": [
+    "611db0742d0ccf3d0c5c2bdc",
+    "611db0862d0ccf3d0c5c2bdd"
+  ]
+}
+
+
+
+
+
+
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+
+
+Ahmed Check - Auth - users apis Logout and check with react native 
+
+——————————————
+
+Improve aggregate and types
+Improve queries. v2
+Filter query types. 
+———————————————
+Workspaces api v1 
+
+——————————— 
+Complete uploader. 
+
+—————————————
+Workflow and action scheme 
+Actions services. 
+——————————
+
+Settings apis and roles. 
+
+
+
+
+
+Ashraf - Category 
+_ users api 
+- 
+- Org - check the migration file 
+- Access is for supper admin - we can add new role later on. 
+-
+
+- Check Subcategory  - 
+- Product check if it is finished 
+- Release  - none release  - order - event and handlers 
+- action time line controller ----
+- change status in order in component, but create a timeline action in service
+
+
+ // base filter 
+
+
+{
+   "requestId":{
+      "filterType":"text",
+      "type":"contains",
+      "filter":"2114"
+   },
+   "requestTitle":{
+      "filterType":"text",
+      "type":"contains",
+      "filter":"AP#1"
+   },
+   "requestType":{
+      "values":[
+         "PRODUCT_REQUEST",
+         "EXPENSE_REQUEST"
+      ],
+      "filterType":"set",
+      "type":"or",
+      "filter":"PRODUCT_REQUEST,EXPENSE_REQUEST"
+   },
+   "date":{
+      "dateFrom":"2023-07-06 00:00:00",
+      "dateTo":"2023-07-30 00:00:00",
+      "type":"inRange",
+      "filterType":"date"
+   },
+   "deadline":{
+      "dateFrom":"2023-07-01 00:00:00",
+      "dateTo":null,
+      "type":"lessThanOrEqual",
+      "filterType":"date"
+   },
+   "requestor":{
+      "filterType":"text",
+      "type":"contains",
+      "filter":"ahmed"
+   }
+}
+
+
+
+
+
+
+
+
+
+Our own app 
+
+Projection from ui 
+Implement Graphql  starting from GS app.

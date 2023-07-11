@@ -1,0 +1,75 @@
+steps:
+  # api
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'build',
+        '-t',
+        'europe-west1-docker.pkg.dev/aerial-fiber-390013/api/production',
+        '-f',
+        'apps/api/Dockerfile',
+        '.',
+      ]
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      ['push', 'europe-west1-docker.pkg.dev/aerial-fiber-390013/api/production']
+
+  # auth-api
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'build',
+        '-t',
+        'europe-west1-docker.pkg.dev/aerial-fiber-390013/auth/production',
+        '-f',
+        'apps/auth/Dockerfile',
+        '.',
+      ]
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      ['push', 'europe-west1-docker.pkg.dev/aerial-fiber-390013/auth/production']
+
+  # actions
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'build',
+        '-t',
+        'europe-west1-docker.pkg.dev/aerial-fiber-390013/actions/production',
+        '-f',
+        'apps/actions/Dockerfile',
+        '.',
+      ]
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      ['push', 'europe-west1-docker.pkg.dev/aerial-fiber-390013/actions/production']
+      
+  # notifications
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'build',
+        '-t',
+        'europe-west1-docker.pkg.dev/aerial-fiber-390013/notifications/production',
+        '-f',
+        'apps/notifications/Dockerfile',
+        '.',
+      ]
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      ['push', 'europe-west1-docker.pkg.dev/aerial-fiber-390013/notifications/production']
+
+  # uploader
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'build',
+        '-t',
+        'europe-west1-docker.pkg.dev/aerial-fiber-390013/uploader/production',
+        '-f',
+        'apps/uploader/Dockerfile',
+        '.',
+      ]
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      ['push', 'europe-west1-docker.pkg.dev/aerial-fiber-390013/uploader/production']
