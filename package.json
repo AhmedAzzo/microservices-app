@@ -53,7 +53,7 @@
     "cookie-parser": "^1.4.6",
     "joi": "^17.9.2",
     "lodash": "^4.17.21",
-    "mongodb": "^5.6.0",
+    "mongodb": "^5.8.0",
     "mongoose": "^7.3.0",
     "nestjs-pino": "^3.2.0",
     "passport": "^0.6.0",
